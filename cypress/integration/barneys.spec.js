@@ -16,7 +16,7 @@ describe('Visit page', function () {
             return result;
         }
 
-        for(let i=0;i<10000000;i++) {
+        for(let i=0;i<1000;i++) {
             cy.visit('https://www.savebarneysny.com/')
     
             cy
@@ -29,7 +29,7 @@ describe('Visit page', function () {
     
             cy.get('.button').click();
 
-            cy.wait(2 * 1000 * 60)
+            cy.wait(2 * 1000 * 60) // wait 2 mins
 
         }
     })
